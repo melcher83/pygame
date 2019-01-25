@@ -28,17 +28,19 @@ while run:
             run = False
     keys = pygame.key.get_pressed()
 
-    if keys[pygame.K_LEFT] and x > vel:
+
+
+    if keys[pygame.K_a] and x > vel:
         x -= vel
 
-    if keys[pygame.K_RIGHT] and x < s_width - width - vel:
+    if keys[pygame.K_d] and x < s_width - width - vel:
         x += vel
 
     if not (isJump):
-        if keys[pygame.K_UP] and y > vel:
+        if keys[pygame.K_w] and y > vel:
             y -= vel
 
-        if keys[pygame.K_DOWN] and y < s_height - height - vel:
+        if keys[pygame.K_s] and y < s_height - height - vel:
             y += vel
         if keys[pygame.K_SPACE]:
             isJump = True
